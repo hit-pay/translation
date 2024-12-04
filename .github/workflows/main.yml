@@ -3,7 +3,8 @@ name: Publish Translations Package
 on:
   push:
     paths:
-      - 'translation/**'
+      - 'translation/**/*'
+      - 'translation/*'
     branches:
       - main  # or master, depending on your default branch
 
@@ -13,10 +14,16 @@ jobs:
     permissions:
       contents: read
       packages: write
-    
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+
+      - name: Print Debug Info
+        run: |
+          echo "Triggered by push to ${{ github.ref }}"
+          echo "Changed files:"
+          git diff --name-only ${{ github.event.before }} ${{ github.event.after }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
@@ -28,7 +35,7 @@ jobs:
       - name: Install dependencies
         working-directory: translation
         run: npm ci || npm install
-        
+
       - name: Publish package
         working-directory: translation
         run: npm publish
