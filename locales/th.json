@@ -59,5 +59,7 @@
   "register.reset.password.new-password": "รหัสผ่านใหม่",
   "register.reset.password.new-password-placeholder": "รหัสผ่านใหม่",
   "register.reset.password.confirm-password": "ยืนยันรหัสผ่าน",
-  "register.reset.button.text": "รีเซ็ต"
+  "register.reset.button.text": "รีเซ็ต",
+   "validation.required": "ที่ {field} เป็นสิ่งจำเป็น",
+  "validation.email": "ที่ {field} ต้องเป็นที่อยู่อีเมลที่ถูกต้อง"
 }

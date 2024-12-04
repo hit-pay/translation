@@ -59,5 +59,7 @@
   "register.reset.password.new-password": "New password",
   "register.reset.password.new-password-placeholder": "New password",
   "register.reset.password.confirm-password": "Confirm Password",
-  "register.reset.button.text": "Reset"
+  "register.reset.button.text": "Reset",
+  "validation.required": "The {field} is required",
+  "validation.email": "The {field} must be a valid email address."
 }
