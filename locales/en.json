@@ -61,5 +61,6 @@
   "register.reset.password.confirm-password": "Confirm Password",
   "register.reset.button.text": "Reset",
   "validation.required": "The {field} is required",
-  "validation.email": "The {field} must be a valid email address."
+  "validation.email": "The {field} must be a valid email address.",
+  "validation.numeric": "The {field} must be a valid number."
 }
