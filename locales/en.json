@@ -63,5 +63,5 @@
   "validation.required": "The {field} is required",
   "validation.email": "The {field} must be a valid email address.",
   "validation.numeric": "The {field} must be a valid number.",
-  "validation.maxLength": "The {field} cannot have more than {param} characters.",
+  "validation.maxLength": "The {field} cannot have more than {param} characters."
 }
