@@ -1,0 +1,36 @@
+name: Publish Translations Package
+
+on:
+  push:
+    paths:
+      - 'translation/**'
+    branches:
+      - main  # or master, depending on your default branch
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16.x'
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@hit-pay'
+
+      - name: Install dependencies
+        working-directory: translation
+        run: npm ci || npm install
+        
+      - name: Publish package
+        working-directory: translation
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
