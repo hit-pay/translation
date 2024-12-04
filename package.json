@@ -1,5 +1,5 @@
 {
-  "name": "translation",
+  "name": "@hit-pay/translation",
   "version": "1.0.0",
   "description": "HitPay translation files",
   "files": [
