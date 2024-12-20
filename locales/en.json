@@ -1345,5 +1345,7 @@
     "enter_name": "Enter name...",
     "account_created": "Your account has been successfully\ncreated!",
     "select_country": "Please select the country where your company is based",
+    "first_name_msg": "First name can not be empty.",
+    "last_name_msg": "Last name can not be empty.",
     "code_not_match": "These codes \"%@\" do not match with our records"
 }
