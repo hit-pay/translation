@@ -1350,7 +1350,7 @@
     "code_valid_msg": "These codes do not match with our records",
     "search_country": "Enter code, country name...",
     "email_valid_msg": "Email format isn't correct",
-    "customer_display": "Customer Display Mode →",
+    "customer_display_ios": "Customer Display Mode →",
     "manage_sale": "Manage In-Person Sales",
     "analyse": "Analyse",
     "sale_report": "Sales Reports at",
