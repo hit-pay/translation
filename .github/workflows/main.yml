@@ -42,3 +42,15 @@ jobs:
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.PAT }}
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+
+      - name: Upload translation files to S3
+        run: |
+          aws s3 cp translation/locales/en.json s3://${{ secrets.AWS_S3_BUCKET }}/translations/en.json
+          aws s3 cp translation/locales/th.json s3://${{ secrets.AWS_S3_BUCKET }}/translations/th.json
